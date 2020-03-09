@@ -1,0 +1,15 @@
+
+.content {
+    padding: 10px;
+    grid-area: c;
+    background-color: aliceblue;
+}
+
+.content img {
+    height: 150px;
+    border-radius: 50px;
+}
+
+.item {
+    color: green;
+}
