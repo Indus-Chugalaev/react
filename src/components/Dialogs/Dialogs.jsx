@@ -1,10 +1,25 @@
 import React from 'react';
-import s from './Header.module.css';
+import s from './Dialogs.module.css';
+import Message from "./Message/Message";
+import DialogsItem from "./DialogItem/DialogsItem";
 
-const Header = () => {
-    return <header className={s.header}>
-        <img src='https://img3.goodfon.ru/original/4368x2912/4/41/volna-pena-more.jpg'/>
-    </header>;
+const Dialogs = (props) => {
+
+
+
+    let dialogsElements = props.dialogs.map( dialog => <DialogsItem name={dialog.name} id={dialog.id}/>);
+    let messageElements = props.messages.map( message => <Message message={message.message}/> );
+
+    return (
+        <div className={s.dialogs}>
+            <div className={s.dialogsItems}>
+                {dialogsElements}
+            </div>
+            <div className={s.messages}>
+                {messageElements}
+            </div>
+        </div>
+    );
 }
 
-export default Header;
+export default Dialogs;

@@ -5,10 +5,11 @@
     background-color: aquamarine;
 }
 
-.item {
+.item a {
     color: white;
+    text-decoration: none;
 }
 
-.active {
+.item a.active {
     color: blueviolet;
 }

@@ -1,23 +1,16 @@
 import React from 'react';
 import s from './Profile.module.css';
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 
-const Profile = () => {
+
+const Profile = (props) => {
     return (
         <div className={s.content}>
-        <div><img src='https://www.bluebirdind.com/wp-content/uploads/2019/02/SERH-50B_1440.jpg'/></div>
-        <div>ava + description</div>
-            <div>
-                <div>
-                    <textarea></textarea>
-                    <button>Add post</button>
-                </div><div className={s.posts}>
-                <MyPosts/>
-
-            </div>
-            </div>
-    </div>
+            <ProfileInfo/>
+            <MyPosts posts={props.posts}/>
+        </div>
     );
 }
 
